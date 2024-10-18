@@ -1,4 +1,8 @@
+
+var isloaded=true;
+
 function mahesh() {
+    if(isloaded){
     for(i=1;i<=4;i++){
         setTimeout(function(){
             let slide=document.getElementById("container")
@@ -7,4 +11,9 @@ function mahesh() {
         <button style="width:300px">BuyNow</button></div>`
         },i*2000)
     }
+    isloaded=false;
     }
+    else{
+        alert("Data is already loaded")
+    }
+}
